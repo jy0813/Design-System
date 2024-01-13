@@ -1,0 +1,99 @@
+.toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 4rem;
+  padding: 1rem 1.6rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+  background-color: #000;
+  color: #fff;
+
+  &.success {
+    background-color: green;
+  }
+  &.error {
+    background-color: crimson;
+  }
+  &.info {
+    background-color: royalblue;
+  }
+
+  .messageArea {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
+  svg {
+    font-size: 1.6rem;
+  }
+
+  .progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.5rem;
+    animation-name: progressBar;
+    animation-timing-function: linear;
+    appearance: none;
+
+    &.success {
+      background-color: #69f9ae;
+    }
+    &.error {
+      background-color: #ffab40;
+      opacity: 0.5;
+    }
+    &.info {
+      background-color: #40c4ff;
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes progressBar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+.toastEnter {
+  opacity: 0;
+  transition: 0.3s all ease;
+}
+
+.toastEnterActive {
+  opacity: 1;
+}
+
+.toastEnterExit {
+  opacity: 1;
+  transition: 0.3s all ease;
+}
+
+.toastEnterExitActive {
+  opacity: 0;
+}
+
+.toastEnterExitDone {
+  height: 0;
+  margin-bottom: 0;
+  padding: 0;
+  transition: 0.3s all ease;
+}
