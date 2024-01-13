@@ -4,7 +4,6 @@
 
 - @jy0813
 
-
 ## Tech Requirement (Tech Stack)
 
 - React
@@ -13,7 +12,7 @@
 - Eslint
 - Prettier
 - TypeScript
-- Styled-Components
+- Module Scss
 - StoryBook (TBU)
 - Chromatic (TBU)
 
