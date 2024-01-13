@@ -10,7 +10,16 @@ export default function Home() {
   console.log(state);
 
   const handleToast = (type: ToastMessageType) => {
-    showToast(type, '토스트 테스트', 'top');
+    switch (type) {
+      case 'success':
+        return showToast(type, '성공하였습니다.');
+      case 'error':
+        return showToast(type, '실패하였습니다.');
+      case 'info':
+        return showToast(type, '정보입니다.');
+      default:
+        return null;
+    }
   };
 
   return (

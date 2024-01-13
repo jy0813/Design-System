@@ -53,17 +53,6 @@
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @keyframes progressBar {
   0% {
     width: 100%;
@@ -75,10 +64,12 @@
 
 .toastEnter {
   opacity: 0;
+  transform: translateY(2rem);
   transition: 0.3s all ease;
 }
 
 .toastEnterActive {
+  transform: translateY(0);
   opacity: 1;
 }
 
